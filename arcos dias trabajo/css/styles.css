@@ -1,0 +1,400 @@
+/* Hoja de estilos externa */
+
+/* Enlazar con una fuente externa de Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Prompt:wght@200;400;600;700;900&display=swap');
+
+/* Declarar fuente copiada localmente */
+@font-face {
+    font-family: "strasua-regular";
+    src: url("../fuentes/strasua/strasua.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "goodtimes-regular";
+    src: url("../fuentes/good_times/good\ times\ rg.otf") format("opentype");
+}
+
+html {
+    /* Establecer el comportamiento del scroll para que el desplazamiento
+    se realice suavemente */
+    scroll-behavior: smooth;
+}
+
+/* https://color.adobe.com/es/color%20theme_1-color-theme-19918761 */
+:root {
+    /* Declaración de variables para colores */
+    --color1:#3079D9;
+    --color2:#2A558C;
+    --color3:#182940;
+    --color4:#9FADBF;
+    --color5:#D0DFF2;
+    --color-negro:#000000;
+    --color-blanco:#ffffff;
+    --gris-claro:#999999;
+    --gris-oscuro:#454545;
+}
+
+/* Eliminar los margenes y espaciados internos (padding) predeterminados en la página */
+* {
+    margin: 3px;
+    padding: 2px;
+}
+
+
+/* Selectores de tipo HTML */
+body {
+    color: var(--color5) ; /* Color del texto */
+    font-family: 'Poppins', sans-serif; /* Aplicando la fuente enlazada */
+}
+
+h1 {
+    font-size: 48px;
+    font-weight: 900;
+    letter-spacing: -2px;
+    text-transform: capitalize;
+}
+
+h2 {
+    font-family: 'Prompt', sans-serif; /* Fuente externa Google Fonts*/
+    font-size: 40px;
+    font-weight: 200;
+    letter-spacing: -2px; 
+    /* text-transform: lowercase; */
+    position: relative;
+    padding-bottom: 10px;
+    text-align: center;
+    color: #000000;
+}
+
+
+h3 {
+    font-size: 20px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+img {
+    /* Elimina el espacio en blanco inferior que dejan las imagenes */
+    display: block;
+}
+
+h1 {
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+p {
+    color:var(--color-negro);
+    margin-top: 0;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+a {
+    color: var(--color1);
+    text-decoration: none; /* Quitar el subrayado del enlace */
+}
+
+/* Selectores de tipo ID */
+#menu-superior {
+    background-color: var(--color-negro);
+    font-size: 0.8em;
+}
+
+#menu-superior .fila {
+    justify-content: space-between;
+}
+
+#menu-superior a {
+    color: var(--color4);
+    padding: 10px; 
+}
+
+#menu-superior a:hover {
+    background-color: var(--color5);
+    color: var(--color3);
+}
+
+#menu-superior i {
+    font-size: 1.2em;
+}
+
+
+#cabecera {
+    background-color: var(--color-blanco);
+}
+
+#cabecera .logo {
+    width: 150px;
+}
+
+#cabecera p {
+    margin-bottom: 0;
+}
+
+#cabecera #menu-principal {
+    /* Aumenta o reduce el tamaño de la fuente porcentualmete respecto al tamaño
+       del texto de esa sección */
+    font-size: 1em;
+}
+
+#cabecera #menu-principal a {
+    padding: 30px 15px;
+    color: var(--color3);
+    border-bottom: solid 4px transparent; /* En modo pasivo no se verá el borde */
+}
+
+#cabecera #menu-principal a:hover {
+    color: var(--color1);
+    background-color: var(--color4);
+    border-bottom: solid 4px var(--color1);
+    /* border-radius: 20px 20px 0px 0px; */
+}
+
+#cabecera .fila {
+    /* Trabaja con flexbox. Alinea la primera y la última caja a los extremos */
+    justify-content: space-between;
+}
+
+/* Clases generales para crear una barra de menu */
+.menu-barra {
+    list-style-type: none; /* Quita la viñeta */
+    padding: 0px;  /* Elimina el padding predeterminado */
+    margin: 0px; /* Elimina el margin predeterminado */
+    display: flex; /* Activa flexbox para que los items se coloquen uno al costado del otro */
+}
+
+.menu-barra a {
+    display: block; /* Trata a cada elemento como si fuese una caja */
+    text-decoration: none; /* Quitar el subrayado del enlace */
+}
+
+#general{
+    text-align: right;
+    background-color: var(--color-negro);
+    color: var(--color-blanco);
+}
+
+ #th, td {
+    width: 25%;
+    text-align: left;
+    vertical-align: top;
+    border: 1px solid #000;
+    border-collapse: collapse;
+    color: #2A558C;
+ }
+#tutor{
+    color: #000;
+}
+
+#pie {
+    background-color: var(--color3);
+    color: var(--color-blanco);
+    padding-top: 45px;
+    padding-bottom: 45px;
+}
+
+#pie p {
+    margin-bottom: 0;
+}
+
+#pie .columna:last-child {
+    text-align: right;
+}
+
+#pie i {
+    font-size: 32px;
+    color: var(--color-blanco);
+    padding: 0px 5px;
+}
+
+#scroll-arriba {
+    background-color: var(--color3);
+    color: var(--color-blanco);
+    width: 45px;
+    height: 45px;
+    line-height: 45px;
+    font-size: 16px;
+    border: solid 2px var(--color-blanco);
+    text-align: center;
+    border-radius: 50%;
+
+    /* Posicionamiento y coordenadas */
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+
+    transition: all 0.5s ease-in-out;
+
+    /* Ocultar el botón al cargar la página */
+    opacity: 0;
+}
+
+#scroll-arriba:hover {
+    background-color: var(--color4);
+    color: var(--color3);
+    box-shadow: -3px 8px 25px 0px rgba(24, 41, 64, 0.3);
+    transform: translateY(-3px);
+}
+
+
+/* Selectores de tipo CLASS */
+.espaciado {
+    padding-top: 90px;
+    padding-bottom: 90px;
+}
+
+.contenedor {
+    /* Ancho máximo de la caja contenedora */
+    max-width: 1200px;
+
+    /* Permiten centrar horizontalmente la caja contenedora */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.fila {
+    /* Coloca los objetos que contiene directamente uno al lado del otro en dirección de fila */
+    display: flex;
+
+    /* Artificio para corregir el problema del alineamiento del contenido en las columnas */
+    margin-left: -15px;
+    margin-right: -15px;
+}
+
+/* Redefine el tamaño de las columnas para que sea igual en todas */
+.columna {
+    flex-basis: 0; /* Es el menor ancho posible para la columna */
+    flex-grow: 1; /* Ajusta proporcionalmente el ancho de la columna*/
+
+    /* Separación en ambos lados de las columnas */
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+
+/* Ajustar el ancho de una columna al 25% del contenedor */
+.columna-25 {
+    flex-basis: 25%;
+    max-width: 25%;
+}
+
+/* Ajustar el ancho de una columna al 33.33% del contenedor */
+.columna-33 {
+    flex-basis: 33.33%;
+    max-width: 33.33%;
+}
+
+/* Ajustar el ancho de una columna al 50% del contenedor */
+.columna-50 {
+    flex-basis: 50%;
+    max-width: 50%;
+}
+
+/* Ajustar el ancho de una columna al 66.66% del contenedor */
+.columna-66 {
+    flex-basis: 66.66%;
+    max-width: 66.66%;
+}
+
+/* Ajustar el ancho de una columna al 75% del contenedor */
+.columna-75 {
+    flex-basis: 75%;
+    max-width: 75%;
+}
+
+.img-ajustar {
+    /* Se utiliza para ajustar el ancho de la imagen
+    al ancho de su caja contenedora */
+    width: 70%;
+    height: auto;
+}
+
+.alinear-vertical {
+    /* Alinea verticalmente el contenido de una caja padre */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.texto-enorme {
+    font-family: "strasua-regular";
+    font-size: 50px; /* Tamaño de la letra */
+    /* font-weight: 200; */
+    /* letter-spacing: -2px;  */
+    /* Espaciado entre caracteres */
+
+    /*  line-heinght es es el interlineado.
+        1em equivale al tamaño actual de la letra */
+    /* Ajustar porcentualmente el interlineado, respecto al tamaño de la letra */
+    line-height: 1.2em; 
+
+    /* Efecto de sombra para el texto */
+    text-shadow: 4px 4px 2px rgba(48,121,217,0.6);
+}
+
+.texto-resaltado {
+    font-weight: 900;
+    color: var(--color5);
+}
+
+.mover-columna-arriba {
+    margin-top: -50px;
+    margin-bottom: -50px;
+}
+
+.enlace-boton {
+    background-color: var(--color3);
+    color: var(--color5);
+    padding: 10px 20px; /* 10px para top/bottom, 20px para left/right */
+    width: fit-content;
+    border-radius: 25px;
+    transition: all 0.5s ease-in-out;
+}
+
+.enlace-boton:hover {
+    background-color: var(--color1);
+}
+
+.borde-derecho {
+    border-right: solid 1px var(--color4);
+}
+
+
+.cabecera-sticky {
+    position: sticky;
+
+    /* Coordenadas */
+    top: 0px;
+    left: 0px;
+
+    /* Posiciona la caja por encima de todas */
+    z-index: 1000;
+}
+
+.element {
+    width: 50%;
+}
+
+@media (max-width: 800px) {
+    .element{
+        width: 100%;
+      
+    }
+}
+
+/* If screen size is LESS than 1200px wide */
+@media (max-width: 1200px){ 
+    /* Styles! */
+}
+
+/* If screen size is MORE than 800px wide */
+@media (min-width: 800px){ 
+    /* Styles! */
+}
+
+/* If screen size is BETWEEN 320px and 768px wide AND the orientation is in landscape mode */
+@media (min-width: 320px) and (max-width: 768px) and (orientation: landscape) { 
+    /* Styles! */
+}
